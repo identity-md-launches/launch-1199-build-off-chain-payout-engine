@@ -1,0 +1,32 @@
+{
+  "name": "imd-moneyback-engine",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0",
+    "os": "linux"
+  },
+  "scripts": {
+    "install": "node scripts/install.mjs",
+    "test": "node scripts/run.mjs vitest run test --maxWorkers=1 --no-file-parallelism --exclude=test/scratch/** --no-cache",
+    "typecheck": "node scripts/typecheck.mjs",
+    "check:bundle": "node scripts/check-bundle.mjs",
+    "rounds": "node scripts/run.mjs tsx src/rounds.ts",
+    "snapshot": "node scripts/run.mjs tsx src/snapshot.ts",
+    "data": "node scripts/run.mjs tsx src/api.ts",
+    "discover": "node scripts/run.mjs tsx scripts/discover-launch.ts",
+    "replay": "node scripts/run.mjs tsx scripts/replay.ts",
+    "reconcile": "node scripts/run.mjs tsx scripts/reconcile-claim.ts",
+    "pm2": "node scripts/run.mjs pm2"
+  },
+  "moneybackVendoredDependencies": {
+    "tsx": "4.21.0",
+    "esbuild": "npm:esbuild-wasm@0.27.4",
+    "viem": "2.38.5",
+    "vitest": "3.2.4",
+    "typescript": "5.9.3",
+    "@types/node": "24.7.2",
+    "pm2": "6.0.13"
+  }
+}

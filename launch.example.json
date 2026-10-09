@@ -1,0 +1,37 @@
+{
+  "chainId": 4663,
+  "token": "<MONEYBACK address from the launch>",
+  "poolManager": "0x8366a39CC670B4001A1121B8F6A443A643e40951",
+  "poolId": "<bytes32 pool id from Initialize>",
+  "hook": "<MoneyBackHook address from Initialize>",
+  "distributor": "<launch Merkle distributor address>",
+  "router": "<MoneyBackRouter address>",
+  "roundPayout": "<RoundPayout address>",
+  "payoutWallet": "<RoundPayout owner and sweep recipient>",
+  "deployer": "<actual deployer address>",
+  "factory": "<actual launch factory address>",
+  "launchBlock": "<first block of complete MONEYBACK transfer history, decimal>",
+  "launchTs": "<launch timestamp in Unix seconds, JSON number>",
+  "launchTx": "<launch transaction hash>",
+  "tokenDecimals": "<result of MONEYBACK decimals(), JSON number>",
+  "abis": {
+    "hook": ["<paste the verified JSON ABI objects, with correct indexed event fields>"],
+    "roundPayout": ["<paste the verified JSON ABI objects>"],
+    "distributor": ["<paste the verified JSON ABI objects>"]
+  },
+  "distributorPending": {
+    "functionName": "<pending function from the distributor ABI>",
+    "args": ["<actual arguments, or use an empty array for pending()>"]
+  },
+  "distributorClaim": {
+    "functionName": "<permissionless claim function from the distributor ABI>",
+    "args": ["<actual claim arguments, including the launch Merkle proof if required>"]
+  },
+  "ethImdPool": {
+    "poolManager": "<public ETH/IMD v4 PoolManager>",
+    "poolId": "<public ETH/IMD bytes32 pool id>",
+    "initializeBlock": "<block containing this pool's Initialize, decimal>",
+    "ethCurrency": "<verified ETH currency or wrapped ETH address used by that pool>",
+    "ethDecimals": "<ETH-leg decimals, JSON number>"
+  }
+}
